@@ -12,27 +12,29 @@ import java.util.Date;
  * @author doria
  */
 public class Equipes {
-    String nom,president;
-    int nbVictoire, nbButP,nbButE, nbChampionnats,nbCoupe,nbPoints;
+    String nom,president, abrevation;
+    int nbVictoire, nbButM,nbButE, nbChampionnats,nbCoupes,nbPoints;
     Date dateCreate;
 
     
     public Equipes() {
     }
-    
-    
-    public Equipes(String nom, String president, int nbVictoire, int nbButP, int nbButE, int nbChampionnats, int nbCoupe, int nbPoints, Date dateCreate) {
+
+    public Equipes(String nom, String president, String abrevation, int nbVictoire, int nbButM, int nbButE, int nbChampionnats, int nbCoupes, int nbPoints, Date dateCreate) {
         this.nom = nom;
         this.president = president;
+        this.abrevation = abrevation;
         this.nbVictoire = nbVictoire;
-        this.nbButP = nbButP;
+        this.nbButM = nbButM;
         this.nbButE = nbButE;
         this.nbChampionnats = nbChampionnats;
-        this.nbCoupe = nbCoupe;
+        this.nbCoupes = nbCoupes;
         this.nbPoints = nbPoints;
         this.dateCreate = dateCreate;
     }
-
+    
+    
+    
     public String getNom() {
         return nom;
     }
@@ -49,6 +51,15 @@ public class Equipes {
         this.president = president;
     }
 
+    public String getAbrevation() {
+        return abrevation;
+    }
+
+    public void setAbrevation(String abrevation) {
+        this.abrevation = abrevation;
+    }
+    
+
     public int getNbVictoire() {
         return nbVictoire;
     }
@@ -57,12 +68,12 @@ public class Equipes {
         this.nbVictoire = nbVictoire;
     }
 
-    public int getNbButP() {
-        return nbButP;
+    public int getNbButM() {
+        return nbButM;
     }
 
-    public void setNbButP(int nbButP) {
-        this.nbButP = nbButP;
+    public void setNbButM(int nbButM) {
+        this.nbButM = nbButM;
     }
 
     public int getNbButE() {
@@ -81,12 +92,12 @@ public class Equipes {
         this.nbChampionnats = nbChampionnats;
     }
 
-    public int getNbCoupe() {
-        return nbCoupe;
+    public int getNbCoupes() {
+        return nbCoupes;
     }
 
-    public void setNbCoupe(int nbCoupe) {
-        this.nbCoupe = nbCoupe;
+    public void setNbCoupes(int nbCoupes) {
+        this.nbCoupes = nbCoupes;
     }
 
     public int getNbPoints() {
@@ -107,11 +118,9 @@ public class Equipes {
 
     @Override
     public String toString() {
-        return "Equipes{" + "nom=" + nom + ", president=" + president + ", nbVictoire=" + nbVictoire + ", nbButP=" + nbButP + ", nbButE=" + nbButE + ", nbChampionnats=" + nbChampionnats + ", nbCoupe=" + nbCoupe + ", nbPoints=" + nbPoints + ", dateCreate=" + dateCreate + '}';
+        return "Equipes{" + "nom=" + nom + ", president=" + president + ", nbVictoire=" + nbVictoire + ", nbButM=" + nbButM + ", nbButE=" + nbButE + ", nbChampionnats=" + nbChampionnats + ", nbCoupes=" + nbCoupes + ", nbPoints=" + nbPoints + ", dateCreate=" + dateCreate + '}';
     }
     
-    
-    
-    
+ 
     
 }

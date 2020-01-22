@@ -10,23 +10,94 @@ package resultatssportif;
  * @author doria
  */
 public class Match extends Equipes{
-    String vainqueur, score;
-    int cartonA, cartonB, pointA, pointB;
+    String vainqueur;
+    int nbCartonA, nbCartonB, nbPointA, nbPointB, nbButA,nbButB;
     Equipes equipeA, equipeB;
     
     public Match() {
         super();
     }
 
-    public Match(String vainqueur, String score, int cartonA, int cartonB, int pointA, int pointB, Equipes equipeA, Equipes equipeB) {
+    public Match(String vainqueur, int nbCartonA, int nbCartonB, int nbPointA, int nbPointB, int nbButA, int nbButB, Equipes equipeA, Equipes equipeB) {
         this.vainqueur = vainqueur;
-        this.score = score;
-        this.cartonA = cartonA;
-        this.cartonB = cartonB;
-        this.pointA = pointA;
-        this.pointB = pointB;
+        this.nbCartonA = nbCartonA;
+        this.nbCartonB = nbCartonB;
+        this.nbPointA = nbPointA;
+        this.nbPointB = nbPointB;
+        this.nbButA = nbButA;
+        this.nbButB = nbButB;
         this.equipeA = equipeA;
         this.equipeB = equipeB;
+    }
+
+    public String getVainqueur() {
+        return vainqueur;
+    }
+
+    
+
+    public int getNbCartonA() {
+        return nbCartonA;
+    }
+
+    public void setNbCartonA(int nbCartonA) {
+        this.nbCartonA = nbCartonA;
+    }
+
+    public int getNbCartonB() {
+        return nbCartonB;
+    }
+
+    public void setNbCartonB(int nbCartonB) {
+        this.nbCartonB = nbCartonB;
+    }
+
+    public int getNbPointA() {
+        return nbPointA;
+    }
+
+    public void setNbPointA(int nbPointA) {
+        this.nbPointA = this.nbPointA + equipeA.getNbPoints();
+    }
+
+    public int getNbPointB() {
+        return nbPointB;
+    }
+
+    public void setNbPointB(int nbPointB) {
+        this.nbPointB = this.nbPointB + equipeB.getNbPoints();
+    }
+
+    public int getNbButA() {
+        return nbButA;
+    }
+
+    public void setNbButA(int nbButA) {
+      if(this.nbButA>this.nbButB){
+      this.vainqueur = equipeA.getNom();
+     } 
+      else if(this.nbButB>this.nbButA){
+      this.vainqueur = equipeA.getNom();
+     } 
+      else{
+      this.vainqueur = "Egalité";
+     }
+    }
+
+    public int getNbButB() {
+        return nbButB;
+    }
+
+    public void setNbButB(int nbButB) {
+      if(this.nbButA>this.nbButB){
+      this.vainqueur = equipeA.getNom();
+     } 
+      else if(this.nbButB>this.nbButA){
+      this.vainqueur = equipeA.getNom();
+     } 
+      else{
+      this.vainqueur = "Egalité";
+     }
     }
 
     public Equipes getEquipeA() {
@@ -45,58 +116,9 @@ public class Match extends Equipes{
         this.equipeB = equipeB;
     }
 
-    public String getVainqueur() {
-        return vainqueur;
-    }
+    
+  
 
-    public void setVainqueur(String vainqueur) {
-        this.vainqueur = vainqueur;
-    }
-
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-
-    public int getCartonA() {
-        return cartonA;
-    }
-
-    public void setCartonA(int cartonA) {
-        this.cartonA = cartonA;
-    }
-
-    public int getCartonB() {
-        return cartonB;
-    }
-
-    public void setCartonB(int cartonB) {
-        this.cartonB = cartonB;
-    }
-
-    public int getPointA() {
-        return pointA;
-    }
-
-    public void setPointA(int pointA) {
-        this.pointA = this.pointA + equipeA.getNbPoints() ; 
-    }
-
-    public int getPointB() {
-        return pointB;
-    }
-
-    public void setPointB(int pointB) {
-        this.pointB = this.pointB + equipeB.getNbPoints();
-    }
-
-    @Override
-    public String toString() {
-        return "Match{" + "vainqueur=" + vainqueur + ", score=" + score + ", cartonA=" + cartonA + ", cartonB=" + cartonB + ", pointA=" + pointA + ", pointB=" + pointB + ", equipeA=" + equipeA + ", equipeB=" + equipeB + '}';
-    }
 
 
     
