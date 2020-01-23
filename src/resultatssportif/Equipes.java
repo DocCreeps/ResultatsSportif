@@ -117,12 +117,13 @@ public class Equipes {
         this.dateCreate = dateCreate;
     }
 
-  
-
     @Override
     public String toString() {
-        return "Equipes{" + "nom=" + nom + ", president=" + president + ", nbVictoire=" + nbVictoire + ", nbButM=" + nbButM + ", nbButE=" + nbButE + ", nbChampionnats=" + nbChampionnats + ", nbCoupes=" + nbCoupes + ", nbPoints=" + nbPoints + ", dateCreate=" + dateCreate + '}';
+        return  abrevation+ ": " +  nom ;
     }
+
+  
+
     
  
     

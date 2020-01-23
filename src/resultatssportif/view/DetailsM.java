@@ -16,6 +16,7 @@ public class DetailsM extends javax.swing.JFrame {
      */
     public DetailsM() {
         initComponents();
+        
     }
 
     /**
@@ -78,6 +79,8 @@ public class DetailsM extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables

@@ -121,7 +121,10 @@ public class Match extends Equipes{
 
     
   
-
+    @Override
+    public String toString() {
+        return  "Match : " + equipeA.getAbrevation() + "  VS  " + equipeB.getAbrevation() + " -  Résultat : " + nbButA + " -- " + nbButB;
+    }
 
 
     

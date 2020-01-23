@@ -5,17 +5,34 @@
  */
 package resultatssportif.view;
 
+import java.util.Vector;
+import resultatssportif.Equipes;
+import resultatssportif.Match;
+
 /**
  *
  * @author doria
  */
 public class EquipeFav extends javax.swing.JFrame {
+    
+ 
 
+Vector vListFav =new Vector();
     /**
      * Creates new form EquipeFav
      */
     public EquipeFav() {
         initComponents();
+        vList =new Vector();
+        ListeEquipes.setListData(vList);
+ 
+    }
+    public Vector getvList(){
+        return vList;
+    }
+    public void setvList(Vector vList){
+        this.vList = vList;
+        ListeEquipes.setListData(vList);
     }
 
     /**
@@ -27,21 +44,225 @@ public class EquipeFav extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ListeEquipesFav = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        ListeEquipes = new javax.swing.JList<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        Ajouter = new javax.swing.JButton();
+        Enlever = new javax.swing.JButton();
+        Accueil = new javax.swing.JButton();
+        InfoE = new javax.swing.JButton();
+        Quitter = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        AddEquipe = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        ADD = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mes Équipes Favorites");
+
+        jScrollPane1.setViewportView(ListeEquipesFav);
+
+        ListeEquipes.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                ListeEquipesComponentShown(evt);
+            }
+        });
+        jScrollPane2.setViewportView(ListeEquipes);
+
+        jLabel1.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
+        jLabel1.setText("Mes équipes Favorite");
+
+        jLabel2.setFont(new java.awt.Font("Lucida Console", 0, 11)); // NOI18N
+        jLabel2.setText("Les équipes");
+
+        Ajouter.setText("<----");
+        Ajouter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AjouterActionPerformed(evt);
+            }
+        });
+
+        Enlever.setText("---->");
+        Enlever.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnleverActionPerformed(evt);
+            }
+        });
+
+        Accueil.setText("Accueil");
+        Accueil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AccueilActionPerformed(evt);
+            }
+        });
+
+        InfoE.setText("Détailles équipes");
+        InfoE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InfoEActionPerformed(evt);
+            }
+        });
+
+        Quitter.setText("Quitter");
+        Quitter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitterActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
+        jLabel3.setText("MES ÉQUIPES FAVORITES");
+
+        jLabel4.setText("Ajouter une équipe");
+
+        ADD.setText("Ajouter");
+        ADD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ADDActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(342, 342, 342))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(89, 89, 89)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(AddEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(ADD))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Enlever)
+                                            .addComponent(Ajouter))
+                                        .addGap(63, 63, 63))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(InfoE)
+                                        .addGap(32, 32, 32)))
+                                .addGap(53, 53, 53)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(31, 31, 31))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(144, 144, 144))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(Accueil)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(454, 454, 454)
+                .addComponent(Quitter)
+                .addGap(58, 58, 58))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addGap(33, 33, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Ajouter)
+                                .addGap(32, 32, 32)
+                                .addComponent(Enlever)
+                                .addGap(43, 43, 43)
+                                .addComponent(InfoE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Accueil)
+                            .addComponent(Quitter))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(AddEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ADD))
+                        .addGap(21, 21, 21))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void InfoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoEActionPerformed
+        // TODO add your handling code here:
+         DetailsE De = new DetailsE();
+        De.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_InfoEActionPerformed
+
+    private void AjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjouterActionPerformed
+        // TODO add your handling code here:
+      int var = ListeEquipes.getSelectedIndex();
+    
+        vListFav.add(vList.elementAt(var));
+        vList.remove(var);
+        ListeEquipes.setListData(vList);
+        ListeEquipesFav.setListData(vListFav);
+    }//GEN-LAST:event_AjouterActionPerformed
+
+    private void EnleverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnleverActionPerformed
+        // TODO add your handling code here:
+         int var = ListeEquipesFav.getSelectedIndex();
+    
+        vList.add(vListFav.elementAt(var));
+        vListFav.remove(var);
+        ListeEquipes.setListData(vList);
+        ListeEquipesFav.setListData(vListFav);
+    }//GEN-LAST:event_EnleverActionPerformed
+
+    private void AccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccueilActionPerformed
+        // TODO add your handling code here:
+        Resultat res = new Resultat();
+        res.setVisible(true);
+        
+    }//GEN-LAST:event_AccueilActionPerformed
+
+    private void QuitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitterActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_QuitterActionPerformed
+
+    private void ListeEquipesComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_ListeEquipesComponentShown
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_ListeEquipesComponentShown
+
+    private void ADDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADDActionPerformed
+        // TODO add your handling code here:
+         vList.add(AddEquipe.getText());
+         ListeEquipes.setListData(vList);
+        
+    }//GEN-LAST:event_ADDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,7 +298,22 @@ public class EquipeFav extends javax.swing.JFrame {
             }
         });
     }
-
+private Vector vList;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ADD;
+    private javax.swing.JButton Accueil;
+    private javax.swing.JTextField AddEquipe;
+    private javax.swing.JButton Ajouter;
+    private javax.swing.JButton Enlever;
+    private javax.swing.JButton InfoE;
+    private javax.swing.JList<Equipes> ListeEquipes;
+    private javax.swing.JList<Equipes> ListeEquipesFav;
+    private javax.swing.JButton Quitter;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

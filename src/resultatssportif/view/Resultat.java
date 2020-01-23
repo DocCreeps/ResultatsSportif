@@ -5,6 +5,9 @@
  */
 package resultatssportif.view;
 
+import java.util.Vector;
+import resultatssportif.Match;
+
 /**
  *
  * @author doria
@@ -76,6 +79,10 @@ public class Resultat extends javax.swing.JFrame {
                 new Resultat().setVisible(true);
             }
         });
+    }
+
+    public void setListeM(Vector<Match> ListeMatch1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package resultatssportif;
+
+import java.util.Vector;
+import resultatssportif.view.EquipeFav;
+import resultatssportif.view.Resultat;
+
 /*
 import java.time.LocalDate;
 */
@@ -19,7 +24,7 @@ public class ResultatsSportif {
     public static void main(String[] args) {
         // TODO code application logic here
         
-    
+    //section équipes
         Equipes OL = new Equipes("Olympique Lyonnais", "J.M. Aulas", "OL", 10, 13,5,9,12,30,1950); 
         Equipes OM = new Equipes("Olympique de Marseille", "J.H. Eyrault", "OM", 5, 5,9,5,18,21,1899);
         Equipes ASSE =new Equipes("Association Sportive de Saint Etienne", "B. Caiazzo", "ASSE", 7, 11,7,10,25,25,1933);
@@ -31,8 +36,24 @@ public class ResultatsSportif {
         Equipes FCN = new Equipes("Football Club de Nante", "W. Kita", "FCN", 5, 8,13,8,4,17,1943);
         Equipes MHSC = new Equipes("Montpellier Herault Sport Club", "L. Nicolin", "MHSC", 4, 6,14,1,2,15,1919);
        
+        //ajout des Equipes
+        EquipeFav frame2 = new EquipeFav();
+        Vector<Equipes> ListeEquipes1 = new Vector();
+        ListeEquipes1.add(OL);
+        ListeEquipes1.add(OM);
+        ListeEquipes1.add(ASSE);
+        ListeEquipes1.add(PSG);
+        ListeEquipes1.add(TFC);
+        ListeEquipes1.add(LOSC);
+        ListeEquipes1.add(SRFC);
+        ListeEquipes1.add(ASM);
+        ListeEquipes1.add(FCN);
+        ListeEquipes1.add(MHSC);
+        frame2.setvList(ListeEquipes1);
+        frame2.setVisible(true);
         
-        
+        //fin section équipes
+        //section Match
         Match match1 = new Match("OL",5,5,3,0,2,1,OL,ASSE);
         Match match2 = new Match("OL",3,4,3,0,1,0,OL,PSG);
         
@@ -49,7 +70,25 @@ public class ResultatsSportif {
         Match match10 = new Match("MHSC",2,3,3,0,1,0,MHSC,OM);
        
         
+         // Ajout des matches
+        Resultat frame = new Resultat();
+        Vector<Match> ListeMatch1 = new Vector();
+        ListeMatch1.add(match1);
+        ListeMatch1.add(match2);
+        ListeMatch1.add(match3);
+        ListeMatch1.add(match4);
+        ListeMatch1.add(match5);
+        ListeMatch1.add(match6);
+        ListeMatch1.add(match7);
+        ListeMatch1.add(match8);
+        ListeMatch1.add(match9);
+        ListeMatch1.add(match10);
+        frame.setListeM(ListeMatch1);
+        frame.setVisible(true);
         
+        
+        //fin section Match
+            
         
    /*   LocalDate ld = LocalDate.of(2015,1,1);
       int annee = ld.getYear();
