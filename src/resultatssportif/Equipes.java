@@ -5,7 +5,7 @@
  */
 package resultatssportif;
 
-import java.util.Date;
+
 
 /**
  *
@@ -13,14 +13,13 @@ import java.util.Date;
  */
 public class Equipes {
     String nom,president, abrevation;
-    int nbVictoire, nbButM,nbButE, nbChampionnats,nbCoupes,nbPoints;
-    Date dateCreate;
+    int nbVictoire, nbButM,nbButE, nbChampionnats,nbCoupes,nbPoints, dateCreate;
 
     
     public Equipes() {
     }
 
-    public Equipes(String nom, String president, String abrevation, int nbVictoire, int nbButM, int nbButE, int nbChampionnats, int nbCoupes, int nbPoints, Date dateCreate) {
+    public Equipes(String nom, String president, String abrevation, int nbVictoire, int nbButM, int nbButE, int nbChampionnats, int nbCoupes, int nbPoints, int dateCreate) {
         this.nom = nom;
         this.president = president;
         this.abrevation = abrevation;
@@ -32,6 +31,8 @@ public class Equipes {
         this.nbPoints = nbPoints;
         this.dateCreate = dateCreate;
     }
+
+    
     
     
     
@@ -108,13 +109,15 @@ public class Equipes {
         this.nbPoints = nbPoints;
     }
 
-    public Date getDateCreate() {
+    public int getDateCreate() {
         return dateCreate;
     }
 
-    public void setDateCreate(Date dateCreate) {
+    public void setDateCreate(int dateCreate) {
         this.dateCreate = dateCreate;
     }
+
+  
 
     @Override
     public String toString() {

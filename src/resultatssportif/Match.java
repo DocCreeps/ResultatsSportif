@@ -5,6 +5,7 @@
  */
 package resultatssportif;
 
+
 /**
  *
  * @author doria
@@ -18,7 +19,7 @@ public class Match extends Equipes{
         super();
     }
 
-    public Match(String vainqueur, int nbCartonA, int nbCartonB, int nbPointA, int nbPointB, int nbButA, int nbButB, Equipes equipeA, Equipes equipeB) {
+   public Match(String vainqueur, int nbCartonA, int nbCartonB, int nbPointA, int nbPointB, int nbButA, int nbButB, Equipes equipeA, Equipes equipeB) {
         this.vainqueur = vainqueur;
         this.nbCartonA = nbCartonA;
         this.nbCartonB = nbCartonB;
@@ -29,6 +30,8 @@ public class Match extends Equipes{
         this.equipeA = equipeA;
         this.equipeB = equipeB;
     }
+
+   
 
     public String getVainqueur() {
         return vainqueur;
