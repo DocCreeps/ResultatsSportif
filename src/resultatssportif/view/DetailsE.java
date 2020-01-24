@@ -193,10 +193,8 @@ this.dispose();            // TODO add your handling code here:
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         Resultat res = new Resultat();
-        
-        res.setVisible(true);
-        this.setVisible(false);
+      /* result.setVisible(true);
+        this.setVisible(false);*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -300,7 +298,15 @@ this.dispose();            // TODO add your handling code here:
        return jTextArea1; //To change body of generated methods, choose Tools | Templates.
     }
     
-    public void setjTextArea1(JTextArea JTextArea1) {
+   /* public void setjTextArea1(JTextArea JTextArea1) {
         this.jTextArea1 = jTextArea1;
     }
+       public Resultat getResult() {
+        return result;
+    }
+
+    public void setResult(Resultat result) {
+        this.result = result;
+    }
+    private Resultat result;*/
 }

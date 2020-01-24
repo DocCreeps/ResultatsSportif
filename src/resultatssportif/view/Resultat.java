@@ -8,13 +8,13 @@ package resultatssportif.view;
 import java.util.Vector;
 import resultatssportif.Match;
 
-
 /**
  *
  * @author Zak
  */
 public class Resultat extends javax.swing.JFrame {
 
+   
     /**
      * Creates new form Resultat
      */
@@ -23,6 +23,7 @@ public class Resultat extends javax.swing.JFrame {
           // instanciation de ListeM comme un vector
          ListeM = new Vector();
          listeMatchs.setListData(ListeM);
+         
     }
 
     public Vector getListeM() {
@@ -144,8 +145,7 @@ public class Resultat extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        EquipeFav EF = new EquipeFav();
-        EF.setVisible(true);
+        eqFav.setVisible(true);
         this.setVisible(false);
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -185,9 +185,20 @@ public class Resultat extends javax.swing.JFrame {
             }
         });
     }
+
+    public EquipeFav getEqFav() {
+        return eqFav;
+    }
+
+    public void setEqFav(EquipeFav eqFav) {
+        this.eqFav = eqFav;
+    }
+    
+    
     
      // Variables declaration de Vector
     private Vector ListeM;
+    private EquipeFav eqFav;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

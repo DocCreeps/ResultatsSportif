@@ -52,6 +52,7 @@ public class ResultatsSportif {
         frame2.setvList(ListeEquipes1);
         frame2.setVisible(false);
         
+        
         //fin section équipes
         //section Match
         Match match1 = new Match("OL",5,5,3,0,2,1,OL,ASSE);
@@ -85,8 +86,8 @@ public class ResultatsSportif {
         ListeMatch1.add(match10);
         frame.setListeM(ListeMatch1);
         frame.setVisible(true);
-        
-        
+        frame.setEqFav(frame2);
+        frame2.setResult(frame);
         //fin section Match
             
         

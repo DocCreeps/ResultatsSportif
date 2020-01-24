@@ -251,10 +251,10 @@ Vector vListFav =new Vector();
 
     private void AccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccueilActionPerformed
         // TODO add your handling code here:
-        Resultat res = new Resultat();
+       
+        //res.setListeM(ListeMatch1);
 
-
-        res.setVisible(true);
+        result.setVisible(true);
         this.setVisible(false);
         
     }//GEN-LAST:event_AccueilActionPerformed
@@ -310,7 +310,18 @@ Vector vListFav =new Vector();
             }
         });
     }
+
+    public Resultat getResult() {
+        return result;
+    }
+
+    public void setResult(Resultat result) {
+        this.result = result;
+    }
+    
+    
 private Vector vList;
+private Resultat result;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ADD;
     private javax.swing.JButton Accueil;
