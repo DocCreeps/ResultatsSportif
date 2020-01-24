@@ -50,7 +50,7 @@ public class ResultatsSportif {
         ListeEquipes1.add(FCN);
         ListeEquipes1.add(MHSC);
         frame2.setvList(ListeEquipes1);
-        frame2.setVisible(true);
+        frame2.setVisible(false);
         
         //fin section équipes
         //section Match

@@ -25,7 +25,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <EmptySpace pref="36" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -215,7 +215,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="InfoE">
       <Properties>
-        <Property name="text" type="java.lang.String" value="D&#xe9;tailles &#xe9;quipes"/>
+        <Property name="text" type="java.lang.String" value="D&#xe9;tails &#xe9;quipes"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InfoEActionPerformed"/>

@@ -198,4 +198,6 @@ public class Resultat extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JList listeMatchs;
     // End of variables declaration//GEN-END:variables
+
+    
 }

@@ -99,7 +99,7 @@ Vector vListFav =new Vector();
             }
         });
 
-        InfoE.setText("Détailles équipes");
+        InfoE.setText("Détails équipes");
         InfoE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 InfoEActionPerformed(evt);
@@ -130,7 +130,7 @@ Vector vListFav =new Vector();
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -214,10 +214,17 @@ Vector vListFav =new Vector();
 
     private void InfoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoEActionPerformed
         // TODO add your handling code here:
-         DetailsE De = new DetailsE();
-       
-      
+        DetailsE De = new DetailsE();
+        Equipes eqp = (Equipes)ListeEquipes.getSelectedValue();
+        De.setEquipes(eqp);
+        De.getjTextField1().setText(eqp.getNom()+"");
+        De.getjTextField2().setText(eqp.getDateCreate()+"");
+        De.getjTextField3().setText(eqp.getPresident()+"");
+        De.getjTextField4().setText(eqp.getNbChampionnats()+"");
+        De.getjTextField5().setText(eqp.getNbCoupes()+"");
         De.setVisible(true);
+        De.getjTextArea1().setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum");
+        
         this.setVisible(false);
         
     }//GEN-LAST:event_InfoEActionPerformed
@@ -245,7 +252,10 @@ Vector vListFav =new Vector();
     private void AccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccueilActionPerformed
         // TODO add your handling code here:
         Resultat res = new Resultat();
+
+
         res.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_AccueilActionPerformed
 

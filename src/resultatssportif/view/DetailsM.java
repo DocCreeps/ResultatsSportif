@@ -218,15 +218,32 @@ public class DetailsM extends javax.swing.JFrame {
     // BTN EQUIPE A DETAIL
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         DetailsE de1 = new DetailsE();
-        System.out.println(match);
+
         Equipes e1= (Equipes)match.getEquipeA();
+        de1.setEquipes(e1);
+        de1.getjTextField1().setText(e1.getNom()+"");
+        de1.getjTextField2().setText(e1.getDateCreate()+"");
+        de1.getjTextField3().setText(e1.getPresident()+"");
+        de1.getjTextField4().setText(e1.getNbChampionnats()+"");
+        de1.getjTextField5().setText(e1.getNbCoupes()+"");
+        de1.getjTextArea1().setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum");
+        de1.setVisible(true);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     // BTN EQUIPE B DETAIL
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         DetailsE de2 = new DetailsE();
         Equipes e2 = (Equipes)match.getEquipeB();
-        
+        de2.setEquipes(e2);
+        de2.getjTextField1().setText(e2.getNom()+"");
+        de2.getjTextField2().setText(e2.getDateCreate()+"");
+        de2.getjTextField3().setText(e2.getPresident()+"");
+        de2.getjTextField4().setText(e2.getNbChampionnats()+"");
+        de2.getjTextField5().setText(e2.getNbCoupes()+"");
+        de2.getjTextArea1().setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum");
+        de2.setVisible(true);
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
