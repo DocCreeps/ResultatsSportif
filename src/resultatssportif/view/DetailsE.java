@@ -5,7 +5,9 @@
  */
 package resultatssportif.view;
 
+import java.awt.TextField;
 import java.util.Vector;
+import javax.swing.JTextField;
 import resultatssportif.Equipes;
 
 /**
@@ -13,7 +15,10 @@ import resultatssportif.Equipes;
  * @author doria
  */
 public class DetailsE extends javax.swing.JFrame {
-    
+
+    private Equipes Eqp;
+
+  
     /**
      * Creates new form DetailsE
      */
@@ -246,4 +251,5 @@ this.dispose();            // TODO add your handling code here:
     private java.awt.TextField textField4;
     private java.awt.TextField textField5;
     // End of variables declaration//GEN-END:variables
+
 }

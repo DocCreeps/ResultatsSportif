@@ -215,6 +215,8 @@ Vector vListFav =new Vector();
     private void InfoEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InfoEActionPerformed
         // TODO add your handling code here:
          DetailsE De = new DetailsE();
+       
+      
         De.setVisible(true);
         this.setVisible(false);
         
