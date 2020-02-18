@@ -8,6 +8,7 @@ package resultatssportif;
 import java.util.Vector;
 import resultatssportif.view.EquipeFav;
 import resultatssportif.view.Resultat;
+import resultatssportif.view.DetailsE;
 
 /*
 import java.time.LocalDate;
@@ -70,7 +71,7 @@ public class ResultatsSportif {
         Match match9 = new Match("EGALITE",2,3,1,1,3,3,FCN,ASM);
         Match match10 = new Match("MHSC",2,3,3,0,1,0,MHSC,OM);
        
-        
+     
          // Ajout des matches
         Resultat frame = new Resultat();
         Vector<Match> ListeMatch1 = new Vector();
@@ -86,8 +87,14 @@ public class ResultatsSportif {
         ListeMatch1.add(match10);
         frame.setListeM(ListeMatch1);
         frame.setVisible(true);
+        
+       
         frame.setEqFav(frame2);
+        
         frame2.setResult(frame);
+        
+      
+        
         //fin section Match
             
         

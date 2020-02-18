@@ -10,6 +10,7 @@ import java.util.Vector;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import resultatssportif.Equipes;
+import resultatssportif.Match;
 
 /**
  *
@@ -24,8 +25,7 @@ public class DetailsE extends javax.swing.JFrame {
      * Creates new form DetailsE
      */
     public DetailsE() {
-        initComponents();
-         
+        initComponents();         
     }
 
     /**
@@ -55,7 +55,7 @@ public class DetailsE extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        accueil = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -102,10 +102,10 @@ public class DetailsE extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton1.setText("Accueil");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        accueil.setText("Accueil");
+        accueil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                accueilActionPerformed(evt);
             }
         });
 
@@ -117,7 +117,7 @@ public class DetailsE extends javax.swing.JFrame {
                 .addGap(283, 283, 283)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(accueil)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3)
                         .addGap(56, 56, 56))
@@ -180,7 +180,7 @@ public class DetailsE extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
-                    .addComponent(jButton1))
+                    .addComponent(accueil))
                 .addContainerGap())
         );
 
@@ -191,11 +191,11 @@ public class DetailsE extends javax.swing.JFrame {
 this.dispose();            // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void accueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accueilActionPerformed
         // TODO add your handling code here:
-      /* result.setVisible(true);
-        this.setVisible(false);*/
-    }//GEN-LAST:event_jButton1ActionPerformed
+      result.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_accueilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,11 +231,23 @@ this.dispose();            // TODO add your handling code here:
             }
         });
     }
+     public Resultat getResult() {
+        return result;
+    }
 
+    public void setResult(Resultat result) {
+        this.result = result;
+    }
+    
+   
+    
+    
+    private Resultat result;
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton accueil;
     private java.awt.Button button1;
     private java.awt.Button button2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -297,16 +309,9 @@ this.dispose();            // TODO add your handling code here:
     public JTextArea getjTextArea1() {
        return jTextArea1; //To change body of generated methods, choose Tools | Templates.
     }
-    
-   /* public void setjTextArea1(JTextArea JTextArea1) {
+    /*
+   public void setjTextArea1(JTextArea JTextArea1) {
         this.jTextArea1 = jTextArea1;
-    }
-       public Resultat getResult() {
-        return result;
-    }
+    }*/
 
-    public void setResult(Resultat result) {
-        this.result = result;
-    }
-    private Resultat result;*/
 }
